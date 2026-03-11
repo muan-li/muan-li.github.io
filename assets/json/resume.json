@@ -1,12 +1,12 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Muan Li",
+    "label": "Ph.D Student in Chemical Engineering",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "mli68@NCSU.edu",
+    "phone": "(984) 379-8200",
+    "url": "https://muan-li.github.io",
+    "summary": "Research on redox polymer battery materials",
     "location": {
       "address": "2712 Broadway St",
       "postalCode": "CA 94115",
