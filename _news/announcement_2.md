@@ -8,15 +8,13 @@ related_posts: false
 
 I am excited to share that I participated in the CBE Research Lab Poster Session held at Duke Energy Hall, Hunt Library, during the Grad Recruiting Weekend. 
 
-This was a significant milestone for me as it marked my first presentation on our group's latest research progress. It was a great opportunity to showcase our work on redox-active polymers and engage with prospective graduate students and colleagues.
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/group_pic_030616.jpg" title="CBE Poster Session" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Presenting our research progress at the CBE Lab Poster Session in Hunt Library.
+    From left to right: Jillian, Fahim, and me
 </div>
 
-It was a rewarding experience to discuss the challenges and future directions of our project in such a vibrant academic environment!
+It was a rewarding experience to discuss the challenges and future directions of our project in such a vibrant environment!
