@@ -3,8 +3,8 @@ layout: page
 title: projects
 permalink: /projects/
 description: Selected fragments of my research and life.
-nav: true
-nav_order: 3
+nav: false
+nav_order: 5
 display_categories: [work, fun]
 horizontal: false
 ---

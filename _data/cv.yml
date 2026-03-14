@@ -38,8 +38,8 @@ cv:
         end_date: present
         summary: Conducting research in chemical and biomolecular engineering.
         highlights:
-          - Add your current project topics and methods.
-          - Add notable outcomes such as talks, posters, or manuscripts.
+          - Synthesize and characterize polymers.
+          - Control the molecular weight distribution of polymers.
 
     Skills:
       - name: Research Skills
@@ -50,7 +50,7 @@ cv:
       - name: Technical Skills
         level: Intermediate
         icon: fa-solid fa-laptop-code
-        keywords: Python, MATLAB, Origin, LaTeX
+        keywords: Python, MATLAB, Origin
 
     Interests:
       - name: Research Interests

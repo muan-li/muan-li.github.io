@@ -1,7 +1,16 @@
 ---
 layout: default
 ---
-{% unless site.data.resume %}
+{% assign use_jsonresume = false %}
+{% if page.cv_format == 'jsonresume' %}
+  {% assign use_jsonresume = true %}
+{% elsif page.cv_format == 'rendercv' %}
+  {% assign use_jsonresume = false %}
+{% elsif site.data.resume %}
+  {% assign use_jsonresume = true %}
+{% endif %}
+
+{% unless use_jsonresume %}
   <div class="post">
     <header class="post-header">
       <h1 class="post-title">
@@ -28,27 +37,93 @@ layout: default
 
     <article>
       <div class="cv">
-        {% for entry in site.data.cv %}
-          <a class="anchor" id="{{ entry.title }}"></a>
+        {% assign rendercv = site.data.cv.cv %}
+        {% if rendercv %}
           <div class="card mt-3 p-3">
-            <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+            <h3 class="card-title font-weight-medium">Profile</h3>
             <div>
-              {% if entry.type == 'list' %}
-                {% include cv/list.liquid %}
-              {% elsif entry.type == 'map' %}
-                {% include cv/map.liquid %}
-              {% elsif entry.type == 'nested_list' %}
-                {% include cv/nested_list.liquid %}
-              {% elsif entry.type == 'time_table' %}
-                {% include cv/time_table.liquid %}
-              {% elsif entry.type == 'list_groups' %}
-                {% include cv/list_groups.liquid %}
-              {% else %}
-                {{ entry.contents }}
+              {% if rendercv.name %}
+                <p><strong>{{ rendercv.name }}</strong>{% if rendercv.label %} - {{ rendercv.label }}{% endif %}</p>
+              {% endif %}
+              {% if rendercv.summary %}
+                <p>{{ rendercv.summary }}</p>
+              {% endif %}
+              {% if rendercv.email or rendercv.location %}
+                <p>
+                  {% if rendercv.email %}{{ rendercv.email }}{% endif %}
+                  {% if rendercv.email and rendercv.location %} | {% endif %}
+                  {% if rendercv.location %}{{ rendercv.location }}{% endif %}
+                </p>
               {% endif %}
             </div>
           </div>
-        {% endfor %}
+
+          {% for section in rendercv.sections %}
+            <a class="anchor" id="{{ section[0] | slugify }}"></a>
+            <div class="card mt-3 p-3">
+              <h3 class="card-title font-weight-medium">{{ section[0] }}</h3>
+              <div>
+                {% for item in section[1] %}
+                  <div class="mb-2">
+                    {% if item.institution %}
+                      <p><strong>{{ item.institution }}</strong>{% if item.studyType %} - {{ item.studyType }}{% endif %}{% if item.area %}, {{ item.area }}{% endif %}</p>
+                    {% elsif item.company %}
+                      <p><strong>{{ item.company }}</strong>{% if item.position %} - {{ item.position }}{% endif %}</p>
+                    {% elsif item.name %}
+                      <p><strong>{{ item.name }}</strong>{% if item.level %} - {{ item.level }}{% endif %}</p>
+                    {% endif %}
+
+                    {% if item.location or item.start_date or item.end_date %}
+                      <p>
+                        {% if item.location %}{{ item.location }}{% endif %}
+                        {% if item.location and item.start_date %} | {% endif %}
+                        {% if item.start_date %}{{ item.start_date }}{% endif %}{% if item.end_date %} - {{ item.end_date }}{% endif %}
+                      </p>
+                    {% endif %}
+
+                    {% if item.summary %}
+                      <p>{{ item.summary }}</p>
+                    {% endif %}
+
+                    {% if item.highlights %}
+                      <ul>
+                        {% for highlight in item.highlights %}
+                          <li>{{ highlight }}</li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                    {% if item.keywords %}
+                      <p>{{ item.keywords | join: ', ' }}</p>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+        {% else %}
+          {% for entry in site.data.cv %}
+            <a class="anchor" id="{{ entry.title }}"></a>
+            <div class="card mt-3 p-3">
+              <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
+              <div>
+                {% if entry.type == 'list' %}
+                  {% include cv/list.liquid %}
+                {% elsif entry.type == 'map' %}
+                  {% include cv/map.liquid %}
+                {% elsif entry.type == 'nested_list' %}
+                  {% include cv/nested_list.liquid %}
+                {% elsif entry.type == 'time_table' %}
+                  {% include cv/time_table.liquid %}
+                {% elsif entry.type == 'list_groups' %}
+                  {% include cv/list_groups.liquid %}
+                {% else %}
+                  {{ entry.contents }}
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
     </article>
   </div>
