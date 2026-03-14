@@ -1,8 +1,1 @@
-import PhotoSwipeLightbox from "https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js";
-import PhotoSwipe from "https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.esm.min.js";
-const photoswipe = new PhotoSwipeLightbox({
-  gallery: ".pswp-gallery",
-  children: "a",
-  pswpModule: PhotoSwipe,
-});
-photoswipe.init();
+import PhotoSwipeLightbox from"https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js";const galleries=document.querySelectorAll(".pswp-gallery");galleries.forEach((e,i)=>{e.id||(e.id=`pswp-gallery-${i+1}`);new PhotoSwipeLightbox({gallery:`#${e.id}`,children:"a",pswpModule:()=>import("https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.esm.min.js")}).init()});
