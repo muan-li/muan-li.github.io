@@ -1,6 +1,6 @@
-import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js';
+import PhotoSwipeLightbox from "https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js";
 
-const galleries = document.querySelectorAll('.pswp-gallery');
+const galleries = document.querySelectorAll(".pswp-gallery");
 
 galleries.forEach((gallery, index) => {
   if (!gallery.id) {
@@ -9,8 +9,8 @@ galleries.forEach((gallery, index) => {
 
   const lightbox = new PhotoSwipeLightbox({
     gallery: `#${gallery.id}`,
-    children: 'a',
-    pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.esm.min.js'),
+    children: "a",
+    pswpModule: () => import("https://cdn.jsdelivr.net/npm/photoswipe@5.4.4/dist/photoswipe.esm.min.js"),
   });
 
   lightbox.init();

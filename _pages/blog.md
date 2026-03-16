@@ -1,9 +1,8 @@
 ---
 layout: default
 permalink: /blog/
-title: journal
-nav: true
-nav_order: 2
+title: news
+nav: false
 pagination:
   enabled: true
   collection: posts
@@ -188,6 +187,26 @@ pagination:
     {% endfor %}
 
   </ul>
+
+{% assign news_items = site.news | sort: 'date' | reverse %}
+{% if news_items.size > 0 %}
+  <hr>
+  <h2>News</h2>
+  <ul class="post-list">
+    {% for item in news_items %}
+      <li>
+        <h3>
+          {% if item.title and item.title != '' %}
+            <a class="post-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+          {% else %}
+            <a class="post-title" href="{{ item.url | relative_url }}">News Update</a>
+          {% endif %}
+        </h3>
+        <p class="post-meta">{{ item.date | date: '%B %d, %Y' }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
 
 {% if page.pagination.enabled %}
 {% include pagination.liquid %}
