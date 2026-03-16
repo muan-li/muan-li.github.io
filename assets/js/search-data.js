@@ -49,10 +49,7 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2/";
-            },},{id: "news-nothing-happened-today",
-          title: 'Nothing happened today',
-          description: "",
-          section: "News",},{id: "news-my-personal-website-is-now-live-at-muanli-com",
+            },},{id: "news-my-personal-website-is-now-live-at-muanli-com",
           title: 'My personal website is now live at muanli.com!',
           description: "",
           section: "News",},{id: "teachings-data-science-fundamentals",
