@@ -10,7 +10,7 @@ ninja.data = [{
       window.location.href = "/";
     },
   },{id: "nav-research",
-          title: "Research",
+          title: "research",
           description: "Now my research focuses on controling the molecular weight distribution of polymer",
           section: "Navigation",
           handler: () => {
@@ -84,8 +84,8 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/muanli", "_blank");
         },
       },{
-        id: 'social-work',
-        title: 'Work',
+        id: 'social-easley_lab',
+        title: 'Easley_lab',
         section: 'Socials',
         handler: () => {
           window.open("https://aeasley.wordpress.ncsu.edu/", "_blank");
