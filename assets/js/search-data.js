@@ -84,7 +84,7 @@ ninja.data = [{
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/muan-li-b1715637b", "_blank");
+          window.open("https://www.linkedin.com/in/muanli", "_blank");
         },
       },{
       id: 'light-theme',
