@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://muan-li.github.io/sitemap.xml
+Sitemap: https://muanli.com/sitemap.xml
