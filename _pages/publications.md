@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: Research
+title: research
 description: Now my research focuses on controling the molecular weight distribution of polymer
 nav: true
 nav_order: 1
