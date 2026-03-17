@@ -25,8 +25,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-PhD Student of <a href='https://cbe.ncsu.edu/'>Chemical Engineering, NC State</a>
+I am a PhD student in <a href='https://cbe.ncsu.edu/'>Chemical Engineering</a> at NC State University, advised by Dr. Easley. I completed my bachelor's degree at China University of Petroleum, Beijing.
 
-📫: mli68@ncsu.edu
+Feel free to reach out! 📫: mli68@ncsu.edu
 
-<p style="margin-top: 1.5rem; margin-bottom: 1.5rem; line-height: 1.9;">Outside of the lab, I am a huge fan of Anime🎨. It's my favorite way to recharge after a long day of research. I also enjoy playing basketball🏀 and badminton🏸, traveling🚗, photography📷.</p>
+<p style="margin-top: 1.5rem; margin-bottom: 1.5rem; line-height: 1.9;">Outside of the lab, I am a huge fan of Anime. It's my favorite way to recharge after a long day of research. I also enjoy playing basketball, badminton, traveling and photography.</p>
